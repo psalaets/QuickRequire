@@ -46,6 +46,16 @@ class aTest(unittest.TestCase):
         result = make_from('var foo = ')
         
         self.assertEquals(result, None)
+    
+    def test_requesting_single_quotes(self):
+        result = make_from('abc', 'single')
+        
+        self.assertEquals(result, " = require('abc')")
+    
+    def test_requesting_double_quotes(self):
+        result = make_from('abc', 'double')
+        
+        self.assertEquals(result, ' = require("abc")')
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,4 +1,5 @@
 import re
+from string import Template
 
 # regex patterns
 var_name_pattern = re.compile('(\s*)([_$a-zA-Z0-9]+)')
@@ -15,7 +16,12 @@ def camel_case_to_dashes(input):
     
     return re.sub(lower_then_upper_pattern, bah, input)
 
-def make_from(left_of_cursor):
+def make_from(left_of_cursor, quote_style='double'):
+    if quote_style == 'double':
+        quote = '"'
+    else:
+        quote = "'"
+    
     # flip before match to make regex easier
     reversed = left_of_cursor[::-1]
     match = var_name_pattern.match(reversed)
@@ -26,10 +32,10 @@ def make_from(left_of_cursor):
         
         variable = flipped_var_name[::-1]
         
-        # build the require() expression
-        require = '= require("%s")' % camel_case_to_dashes(variable)
+        # template for the require() expression
+        require = '= require(${quote}${module}${quote})'
         
         if space_after_var_name == '':
             require = ' ' + require
         
-        return require
+        return Template(require).substitute(quote=quote, module=camel_case_to_dashes(variable))
