@@ -3,7 +3,7 @@ import sublime, sublime_plugin, require_call
 def quote_style():
     return sublime.load_settings(__name__ + '.sublime-settings').get('quote_style')
 
-class AutoRequireModuleCommand(sublime_plugin.TextCommand):
+class QuickRequireCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for region in self.view.sel():
             # get line cursor is on
