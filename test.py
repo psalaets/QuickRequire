@@ -16,6 +16,16 @@ class aTest(unittest.TestCase):
         result = make_from('abc    ')
         
         self.assertEquals(result, '= require("abc")')
+    
+    def test_camel_case_var(self):
+        result = make_from('camelCaseBlah')
+        
+        self.assertEquals(result, ' = require("camel-case-blah")')
+    
+    def test_capitalized_var(self):
+        result = make_from('Blah')
+        
+        self.assertEquals(result, ' = require("blah")')
 
 if __name__ == '__main__':
     unittest.main()
