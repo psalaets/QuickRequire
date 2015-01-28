@@ -1,6 +1,6 @@
 import sublime, sublime_plugin, require_call
 
-def quote_style:
+def quote_style():
     return sublime.load_settings(__name__ + '.sublime-settings').get('quote_style')
 
 class AutoRequireModuleCommand(sublime_plugin.TextCommand):
