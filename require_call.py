@@ -10,7 +10,7 @@ lower_then_upper_pattern = re.compile('([a-z])([A-Z])')
 def bah(match):
     return match.group(1) + '-' + match.group(2).lower()
 
-def camel_case_to_dashes(input):
+def module_name(input):
     if input[0].isupper():
         input = input[0].lower() + input[1:]
     
@@ -38,4 +38,4 @@ def make_from(left_of_cursor, quote_style='double'):
         if space_after_var_name == '':
             require = ' ' + require
         
-        return Template(require).substitute(quote=quote, module=camel_case_to_dashes(variable))
+        return Template(require).substitute(quote=quote, module=module_name(variable))
