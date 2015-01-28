@@ -14,4 +14,5 @@ class QuickRequireCommand(sublime_plugin.TextCommand):
             region_up_to_cursor = sublime.Region(line.begin(), cursorPosition)
             left_side = self.view.substr(region_up_to_cursor)
             
-            return require_call.make_from(left_side, quote_style())
+            output = require_call.make_from(left_side, quote_style())
+            self.view.insert(edit, cursorPosition, output)
