@@ -56,6 +56,11 @@ class aTest(unittest.TestCase):
         result = make_from('abc', 'double')
         
         self.assertEquals(result, ' = require("abc")')
+    
+    def test_requesting_unknown_quote_style(self):
+        result = make_from('abc', 'blah')
+        
+        self.assertEquals(result, ' = require("abc")')
 
 if __name__ == '__main__':
     unittest.main()

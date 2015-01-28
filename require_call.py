@@ -17,10 +17,10 @@ def camel_case_to_dashes(input):
     return re.sub(lower_then_upper_pattern, bah, input)
 
 def make_from(left_of_cursor, quote_style='double'):
-    if quote_style == 'double':
-        quote = '"'
-    else:
+    if quote_style == 'single':
         quote = "'"
+    else:
+        quote = '"'
     
     # flip before match to make regex easier
     reversed = left_of_cursor[::-1]
