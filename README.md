@@ -48,4 +48,11 @@ Expected values: `"double"` or `"single"`
 
 ## Install
 
-???
+### Manually
+
+1. `cd` into the Packages directory of your Sublime Text
+2. `git clone https://github.com/psalaets/QuickRequire.git`
+
+### Using Package Control
+
+Package Control support is pending
