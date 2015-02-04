@@ -29,9 +29,9 @@ Note: equals sign is also added in front of require()
 QuickRequire looks at the text on the left of the cursor to generate the module name.
 
 ```
-foo    -> require("foo")
-Foo    -> require("foo")
-fooBar -> require("foo-bar")
+foo    -> = require("foo")
+Foo    -> = require("foo")
+fooBar -> = require("foo-bar")
 ```
 
 If a variable name isn't found, it generates `require("")`
@@ -42,7 +42,7 @@ Go to `Preferences | Package Settings | QuickRequire` to modify these.
 
 ### quote_style
 
-What kind of quotes to use in generated require() call.
+What kind of quotes to use in generated require() call. Defaults to `"double"`.
 
 Expected values: `"double"` or `"single"`
 
