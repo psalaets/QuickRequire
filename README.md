@@ -22,7 +22,7 @@ var foo
 var foo = require("foo")
 ```
 
-Note: equals sign is added in front of require()
+Note: equals sign is also added in front of require()
 
 ## Supported variable names
 
