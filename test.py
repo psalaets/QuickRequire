@@ -35,17 +35,17 @@ class aTest(unittest.TestCase):
     def test_just_space(self):
         result = make_from('     ')
         
-        self.assertEquals(result, None)
+        self.assertEquals(result, 'require("${1:}")')
     
     def test_empty_string(self):
         result = make_from('')
         
-        self.assertEquals(result, None)
+        self.assertEquals(result, 'require("${1:}")')
     
     def test_var_with_equals(self):
         result = make_from('var foo = ')
         
-        self.assertEquals(result, None)
+        self.assertEquals(result, 'require("${1:}")')
     
     def test_requesting_single_quotes(self):
         result = make_from('abc', 'single')

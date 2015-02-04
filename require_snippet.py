@@ -22,6 +22,10 @@ def make_from(left_of_cursor, quote_style='double'):
     else:
         quote = '"'
     
+    module = '';
+    # template for the require() snippet
+    require_snippet = 'require(${quote}$${1:${module}}${quote})'
+    
     # flip before match to make regex easier
     reversed = left_of_cursor[::-1]
     match = var_name_pattern.match(reversed)
@@ -33,10 +37,11 @@ def make_from(left_of_cursor, quote_style='double'):
         variable = flipped_var_name[::-1]
         module = module_name(variable)
         
-        # template for the require() snippet
-        require_snippet = '= require(${quote}$${1:${module}}${quote})'
+        # we know there is a var name, add equals sign
+        require_snippet = '= ' + require_snippet
         
+        # add a space after var name if needed
         if space_after_var_name == '':
             require_snippet = ' ' + require_snippet
-        
-        return Template(require_snippet).substitute(quote=quote, module=module)
+    
+    return Template(require_snippet).substitute(quote=quote, module=module)
