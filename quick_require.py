@@ -15,4 +15,5 @@ class QuickRequireCommand(sublime_plugin.TextCommand):
             left_side = self.view.substr(region_up_to_cursor)
             
             output = require_call.make_from(left_side, quote_style())
-            self.view.insert(edit, cursorPosition, output)
+            
+            self.view.run_command('insert_snippet', {'contents': output})
