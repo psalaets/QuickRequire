@@ -33,8 +33,8 @@ def make_from(left_of_cursor, quote_style='double'):
         variable = flipped_var_name[::-1]
         module = module_name(variable)
         
-        # template for the require() expression
-        require = '= require(${quote}${module}${quote})'
+        # template for the require() snippet
+        require = '= require(${quote}$${1:${module}}${quote})'
         
         if space_after_var_name == '':
             require = ' ' + require
