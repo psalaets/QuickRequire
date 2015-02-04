@@ -31,6 +31,7 @@ def make_from(left_of_cursor, quote_style='double'):
         flipped_var_name = match.group(2)
         
         variable = flipped_var_name[::-1]
+        module = module_name(variable)
         
         # template for the require() expression
         require = '= require(${quote}${module}${quote})'
@@ -38,4 +39,4 @@ def make_from(left_of_cursor, quote_style='double'):
         if space_after_var_name == '':
             require = ' ' + require
         
-        return Template(require).substitute(quote=quote, module=module_name(variable))
+        return Template(require).substitute(quote=quote, module=module)
