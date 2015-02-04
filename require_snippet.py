@@ -34,9 +34,9 @@ def make_from(left_of_cursor, quote_style='double'):
         module = module_name(variable)
         
         # template for the require() snippet
-        require = '= require(${quote}$${1:${module}}${quote})'
+        require_snippet = '= require(${quote}$${1:${module}}${quote})'
         
         if space_after_var_name == '':
-            require = ' ' + require
+            require_snippet = ' ' + require_snippet
         
-        return Template(require).substitute(quote=quote, module=module)
+        return Template(require_snippet).substitute(quote=quote, module=module)
