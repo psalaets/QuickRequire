@@ -12,18 +12,21 @@ var foo
 
 ### 2. Type the keyboard shortcut
 
-* OSX: cmd + shift + o
-* Windows/Linux: ctrl + shift + o
+* OS X: `cmd + shift + o`
+* Windows: `ctrl + shift + o`
+* Linux: `ctrl + shift + o`
 
-### 3. require() is inserted
+### 3. QuickRequire inserts the require() call
 
 ```js
 var foo = require("foo")
 ```
 
+Note: equals sign is added in front of require()
+
 ## Supported variable names
 
-QuickRequire looks at the text to the left of the cursor to generate the module name.
+QuickRequire looks at the text on the left of the cursor to generate the module name.
 
 ```
 foo    -> require("foo")
