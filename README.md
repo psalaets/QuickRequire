@@ -1,6 +1,6 @@
 # QuickRequire
 
-Sublime Text plugin for generating CommonJS-style require() calls.
+Sublime Text plugin for generating node-style require() calls.
 
 ## Usage
 
