@@ -1,5 +1,5 @@
 import unittest
-from require_call import make_from
+from require_snippet import make_from
 
 class aTest(unittest.TestCase):
     def test_var_name(self):

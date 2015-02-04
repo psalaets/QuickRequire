@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, require_call
+import sublime, sublime_plugin, require_snippet
 
 def quote_style():
     return sublime.load_settings(__name__ + '.sublime-settings').get('quote_style')
@@ -14,6 +14,6 @@ class QuickRequireCommand(sublime_plugin.TextCommand):
             region_up_to_cursor = sublime.Region(line.begin(), cursorPosition)
             left_side = self.view.substr(region_up_to_cursor)
             
-            output = require_call.make_from(left_side, quote_style())
+            output = require_snippet.make_from(left_side, quote_style())
             
             self.view.run_command('insert_snippet', {'contents': output})
