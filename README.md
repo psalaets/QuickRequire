@@ -50,7 +50,7 @@ Expected values: `"double"` or `"single"`
 
 ### Manually
 
-1. `cd` into the Packages directory of your Sublime Text
+1. `cd` into the [Packages directory](http://docs.sublimetext.info/en/latest/basic_concepts.html#the-packages-directory) of your Sublime Text
 2. `git clone https://github.com/psalaets/QuickRequire.git`
 
 ### Using Package Control
