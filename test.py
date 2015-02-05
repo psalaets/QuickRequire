@@ -1,5 +1,10 @@
-import unittest
-from require_snippet import make_from
+import unittest, sys
+
+if sys.version_info[0] == 3:
+    from . import require_snippet
+    make_from = require_snippet.make_from
+else:
+    from require_snippet import make_from
 
 class aTest(unittest.TestCase):
     def test_var_name(self):

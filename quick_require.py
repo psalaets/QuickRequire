@@ -1,4 +1,9 @@
-import sublime, sublime_plugin, require_snippet
+import sublime, sublime_plugin
+
+if sys.version_info[0] == 3:
+    from . import require_snippet
+else:
+    from require_snippet import make_from
 
 def quote_style():
     return sublime.load_settings(__name__ + '.sublime-settings').get('quote_style')
