@@ -22,7 +22,7 @@ var foo
 var foo = require("foo")
 ```
 
-Note: equals sign is also added in front of require()
+Note: an equals sign is also added in front of require()
 
 ## Supported variable names
 
@@ -46,7 +46,7 @@ What kind of quotes to use in generated require() call. Defaults to `"double"`.
 
 Expected values: `"double"` or `"single"`
 
-## Install
+## Installation
 
 ### Manually
 
