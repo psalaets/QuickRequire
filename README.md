@@ -36,6 +36,10 @@ fooBar -> = require("foo-bar")
 
 If a variable name isn't found, it generates `require("")`
 
+## Internal modules
+
+QuickRequire doesn't have support for requiring a file relative to the current file. Pairing QuickRequire with [AutoFileName](https://packagecontrol.io/packages/AutoFileName) will get you something decent.
+
 ## Settings
 
 Go to `Preferences | Package Settings | QuickRequire` to modify these.
