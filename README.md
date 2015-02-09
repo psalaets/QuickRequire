@@ -1,6 +1,10 @@
 # QuickRequire
 
-Sublime Text 2/3 plugin for generating node-style require() calls.
+Sublime Text 2 and 3 plugin for generating node-style require() calls.
+
+## Example
+
+![screenshots](demo.gif)
 
 ## Usage
 
@@ -36,7 +40,7 @@ fooBar -> = require("foo-bar")
 
 If a variable name isn't found, it generates `require("")`
 
-## Internal modules
+## Requiring internal modules
 
 QuickRequire doesn't have support for requiring a file relative to the current file. Pairing QuickRequire with [AutoFileName](https://packagecontrol.io/packages/AutoFileName) will get you something decent.
 
