@@ -8,7 +8,7 @@ Sublime Text 2 and 3 plugin for generating node-style require() calls.
 
 ## Usage
 
-### 1. Type something
+### 1. Type a variable name
 
 ```js
 var foo
