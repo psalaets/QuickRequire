@@ -1,8 +1,7 @@
 import unittest, sys
 
 if sys.version_info[0] == 3:
-    from . import require_snippet
-    make_from = require_snippet.make_from
+    from .require_snippet import make_from
 else:
     from require_snippet import make_from
 
