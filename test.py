@@ -6,7 +6,7 @@ if sys.version_info[0] == 3:
 else:
     from require_snippet import make_from
 
-class aTest(unittest.TestCase):
+class Test(unittest.TestCase):
     def test_var_name(self):
         result = make_from('var abc')
         
