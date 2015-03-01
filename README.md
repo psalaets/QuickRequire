@@ -16,9 +16,9 @@ var foo
 
 ### 2. Type the keyboard shortcut
 
-* OS X: `cmd + shift + o`
-* Windows: `ctrl + shift + o`
-* Linux: `ctrl + shift + o`
+* OS X: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>
+* Windows: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>
+* Linux: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>
 
 ### 3. QuickRequire inserts the require() call
 
