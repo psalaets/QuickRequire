@@ -1,3 +1,4 @@
 {
-    "quote_style": "double"
+    "quote_style": "double",
+    "knownModulesByVariableName": {}
 }
