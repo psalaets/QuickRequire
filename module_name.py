@@ -15,7 +15,7 @@ def module_name(variable_name):
         return guess_name(variable_name)
 
 def known_name(variable_name):
-    known_modules = get_setting('knownModulesByVariableName')
+    known_modules = get_setting('known_modules_by_variable_name')
     if known_modules and variable_name in known_modules:
         return known_modules[variable_name]
     else:
