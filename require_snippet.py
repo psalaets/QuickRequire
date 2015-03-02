@@ -9,11 +9,11 @@ else:
 # regex patterns
 var_name_pattern = re.compile('(\s*)([_$a-zA-Z0-9]+)')
 
-def make_from(left_of_cursor, quote_style='double'):
-    if quote_style == 'single':
-        quote = "'"
-    else:
+def make_from(left_of_cursor, quote_style='single'):
+    if quote_style == 'double':
         quote = '"'
+    else:
+        quote = "'"
     
     module = '';
     # template for the require() snippet

@@ -23,7 +23,7 @@ var foo
 ### 3. QuickRequire inserts the require() call
 
 ```js
-var foo = require("foo")
+var foo = require('foo')
 ```
 
 Note: an equals sign is also added in front of require()
@@ -33,12 +33,12 @@ Note: an equals sign is also added in front of require()
 QuickRequire looks at the text on the left of the cursor to generate the module name.
 
 ```
-foo    -> = require("foo")
-Foo    -> = require("foo")
-fooBar -> = require("foo-bar")
+foo    -> = require('foo')
+Foo    -> = require('foo')
+fooBar -> = require('foo-bar')
 ```
 
-If a variable name isn't found, it generates `require("")`
+If a variable name isn't found, it generates `require('')`
 
 ## Requiring internal modules
 
@@ -50,9 +50,9 @@ Go to `Preferences | Package Settings | QuickRequire` to modify these.
 
 ### quote_style
 
-What kind of quotes to use in generated require() call. Defaults to `"double"`.
+What kind of quotes to use in generated require() call. Defaults to `"single"`.
 
-Expected values: `"double"` or `"single"`
+Expected values: `"single"` or `"double"`
 
 ### known_modules_by_variable_name
 
