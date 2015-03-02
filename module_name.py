@@ -1,4 +1,4 @@
-import re
+import re, sys
 
 if sys.version_info[0] == 3:
     from .get_setting import get_setting
