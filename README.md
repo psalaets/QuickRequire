@@ -54,7 +54,7 @@ What kind of quotes to use in generated require() call. Defaults to `"double"`.
 
 Expected values: `"double"` or `"single"`
 
-### knownModulesByVariableName
+### known_modules_by_variable_name
 
 Object that maps variable names to module names. Useful for when names won't match using the naming conventions.
 
@@ -62,7 +62,7 @@ Example:
 
 ```json
 {
-  "knownModulesByVariableName": {
+  "known_modules_by_variable_name": {
     "_": "lodash"
   }
 }
