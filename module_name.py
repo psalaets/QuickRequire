@@ -11,7 +11,7 @@ def module_name(variable_name):
     known = known_name(variable_name)
     if known:
         return known
-    else
+    else:
         return guess_name(variable_name)
 
 def known_name(variable_name):
