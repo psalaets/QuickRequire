@@ -21,6 +21,11 @@ def known_name(variable_name):
     else:
         return None
 
+# param:    match containing 2 groups: 'a' and 'B'
+# returns: 'a-b'
+def to_dashed(match):
+    return match.group(1) + '-' + match.group(2).lower()
+
 def guess_name(variable_name):
     if variable_name[0].isupper():
         variable_name = variable_name[0].lower() + variable_name[1:]

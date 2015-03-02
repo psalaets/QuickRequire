@@ -9,11 +9,6 @@ else:
 # regex patterns
 var_name_pattern = re.compile('(\s*)([_$a-zA-Z0-9]+)')
 
-# param:    match containing 2 groups: 'a' and 'B'
-# returns: 'a-b'
-def to_dashed(match):
-    return match.group(1) + '-' + match.group(2).lower()
-
 def make_from(left_of_cursor, quote_style='double'):
     if quote_style == 'single':
         quote = "'"
