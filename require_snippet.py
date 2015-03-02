@@ -1,4 +1,4 @@
-import re
+import re, sys
 from string import Template
 
 if sys.version_info[0] == 3:
