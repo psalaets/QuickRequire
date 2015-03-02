@@ -77,4 +77,4 @@ Example:
 
 ### Using Package Control
 
-Package Control support is pending
+This plugin wasn't accepted into the Package Control registry so manual install is the only option.
