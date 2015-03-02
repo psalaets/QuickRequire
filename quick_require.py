@@ -2,11 +2,13 @@ import sublime, sublime_plugin, sys
 
 if sys.version_info[0] == 3:
     from .require_snippet import make_from
+    from .get_setting import get_setting
 else:
     from require_snippet import make_from
+    from get_setting import get_setting
 
 def quote_style():
-    return sublime.load_settings(__name__ + '.sublime-settings').get('quote_style')
+    return get_setting('quote_style')
 
 class QuickRequireCommand(sublime_plugin.TextCommand):
     def run(self, edit):
