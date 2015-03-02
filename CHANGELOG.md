@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2015-03-02
+### Changed
+
+- Default quote_style is now single quotes
+
 ## [2.0.0] - 2015-03-02
 ### Changed
 
