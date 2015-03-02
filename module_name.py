@@ -30,4 +30,4 @@ def guess_name(variable_name):
     if variable_name[0].isupper():
         variable_name = variable_name[0].lower() + variable_name[1:]
     
-    return re.sub(lower_then_upper_pattern, to_dashed, var_name)
+    return re.sub(lower_then_upper_pattern, to_dashed, variable_name)
