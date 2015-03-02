@@ -15,7 +15,11 @@ def module_name(variable_name):
         return guess_name(variable_name)
 
 def known_name(variable_name):
-    return get_setting('knownModulesByVariableName')[variable_name]
+    known_modules = get_setting('knownModulesByVariableName')
+    if known_modules:
+        return known_modules[variable_name]
+    else:
+        return None
 
 def guess_name(variable_name):
     if variable_name[0].isupper():
